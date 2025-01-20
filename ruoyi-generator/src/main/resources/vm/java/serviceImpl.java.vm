@@ -4,17 +4,17 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import java.util.List;
     #foreach ($column in $columns)
         #if($column.javaField == 'createTime' || $column.javaField == 'updateTime')
-        import com.rchuing.common.utils.DateUtils;
+import com.ruoyi.common.utils.DateUtils;
             #break
         #end
     #end
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
     #if($table.sub)
-    import java.util.ArrayList;
-    import com.rchuing.common.utils.StringUtils;
-    import org.springframework.transaction.annotation.Transactional;
-    import ${packageName}.domain.${subClassName};
+import java.util.ArrayList;
+import com.ruoyi.common.utils.StringUtils;
+import org.springframework.transaction.annotation.Transactional;
+import ${packageName}.domain.${subClassName};
     #end
 import ${packageName}.mapper.${ClassName}Mapper;
 import ${packageName}.domain.${ClassName};
